@@ -1,0 +1,12 @@
+.container-fluid{
+    padding: 0;
+}
+
+.btnSubmit{
+    margin-top:5% ;
+    width: fit-content;
+}
+
+.div-btn{
+    width: fit-content;
+}
