@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { User } from '../../entities';
 import { AuthService } from '../../services/auth/auth.service';
-import { Location } from '@angular/common';
 import { Route, Router } from '@angular/router';
 
 @Component({
@@ -9,33 +8,38 @@ import { Route, Router } from '@angular/router';
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
-export class RegisterComponent{
-  user:User={
-    name:'',
-    firstName:'',
-    address:'',
-    email:'',
-    password:'',
-    phoneNumber:'' ,
-    avatar:''
+export class RegisterComponent implements OnInit {
+  user: User = {
+    name: '',
+    firstName: '',
+    address: '',
+    email: '',
+    password: '',
+    phoneNumber: '',
+    avatar: ''
   };
-  repeat ='';
-  feedback='';
+  repeat = '';
+  feedback = '';
   isLogin = false;
 
-  constructor(private authService:AuthService, private router:Router ){}
 
-  
-  onSubmit(){
+  constructor(private authService: AuthService, private router: Router) { }
+
+  ngOnInit(): void {
+  }
+
+
+
+  onSubmit() {
     if (!this.isLogin) {
       this.authService.addUser(this.user).subscribe({
-        complete:()=>{this.feedback='Registration complete.'; this.isLogin=true},
-        error:()=> this.feedback = 'User already exists'
+        complete: () => { this.feedback = 'Registration complete.'; this.isLogin = true },
+        error: () => this.feedback = 'User already exists'
       });
-    }else{
+    } else {
       this.authService.login(this.user).subscribe({
-        complete:()=>this.router.navigate(['/']),
-        error:()=> this.feedback='Credentials error'
+        complete: () => this.router.navigate(['/']),
+        error: () => this.feedback = 'Credentials error'
       });
     }
   }

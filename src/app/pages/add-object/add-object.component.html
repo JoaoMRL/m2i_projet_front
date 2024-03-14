@@ -1,0 +1,20 @@
+<div class="divBody d-flex flex-column">
+    <app-navbar></app-navbar>
+    <div class="container-fluid">
+        <form action="">
+            <input type="text" class="form-control mt-3 " [(ngModel)]="object.name" placeholder="Nom de l'objet">
+            <textarea class="form-control mt-5" [(ngModel)]="object.description" placeholder="Descritpion" id="floatingTextarea"></textarea>
+           <div class="d-flex mt-5 searchBar">
+            <input type="search" name="search" placeholder="Search" class="form-control me-2" id="search">
+            <button type="" class="btnSearch">
+                Choisir
+            </button>
+           </div>
+           <div class="d-flex justify-content-evenly mt-5">
+                <button type="submit" class="btnValidez">Ajouter</button>
+                <button type="reset" class="btnAnnuler"><a href="">Annuler</a></button>
+           </div>
+        </form>
+    </div>
+    <app-footer></app-footer>
+</div>

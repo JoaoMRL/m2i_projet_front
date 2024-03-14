@@ -1,0 +1,68 @@
+/* Structure Page a Import */
+.divBody{
+    min-height: 100vh;
+}
+
+.container-fluid{
+    flex:1;
+}
+
+div.searchBar{
+    margin-top: 2%;
+}
+div.searchBar form input{
+    margin-left: 5%;
+}
+div.searchBar form button{
+    background-color: #F5F7F8;
+    border: 1px solid #45474B;
+    border-radius: 55%;
+}
+
+textarea{
+    height: 20vh;
+}
+.btnSearch {
+    background-color: #495E57;
+    color: #F5F7F8;
+    border: 1px solid #495E57;
+    border-radius: 10%;
+}
+
+.btnValidez{
+    background-color: #495E57;
+    color: #F5F7F8;
+    border: 1px solid #495E57;
+    border-radius: 3%;
+    padding-bottom: 0.5%;
+
+    font-size: x-large;
+}
+
+.btnAnnuler{
+    background-color: #CF455C;
+    color: #F5F7F8;
+    border: 1px solid #CF455C;
+    border-radius: 3%;
+    padding-bottom: 0.5%;
+
+    font-size: x-large;
+}
+.btnAnnuler a {
+    text-decoration: none;
+    color: #F5F7F8;
+
+}
+
+@media screen and (max-width:576px) {
+    .btnValidez{
+        font-size: small;
+    }
+    .btnAnnuler{
+        font-size: small;
+
+    }
+    .btnSearch {
+        font-size: small;
+    }
+}

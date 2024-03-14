@@ -1,3 +1,4 @@
+/* Structure Page a Import */
 .divBody{
     min-height: 100vh;
 }
@@ -6,12 +7,8 @@
     flex:1;
 }
 
-div.intro h1{
-    text-align: center;
-}
-div.intro p{
-    margin-left: 10%;
-    margin-right: 10%;
+div.searchBar{
+    margin-top: 2%;
 }
 div.searchBar form input{
     margin-left: 5%;
@@ -21,3 +18,4 @@ div.searchBar form button{
     border: 1px solid #45474B;
     border-radius: 55%;
 }
+

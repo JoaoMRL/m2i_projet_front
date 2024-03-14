@@ -1,0 +1,18 @@
+div{
+    margin: 0;
+    background-color: #45474B;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h5{
+    color: #F4CE14;
+    margin: 0;
+
+}
+@media (max-width: 576px){
+    h5{
+        font-size: x-small;
+    }
+}
