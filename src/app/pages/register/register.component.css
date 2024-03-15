@@ -45,9 +45,17 @@ input{
     border: 1px solid #F4CE14;
     font-size: x-large;
     margin-bottom: 1%;
+    color: #F4CE14;
+
 }
 input::placeholder{
     color: #F4CE14;
+}
+input:focus{
+    color: #F4CE14;
+    background-color: #45474B;
+    border: 1px solid #F4CE14;
+
 }
 
 button{
@@ -56,6 +64,11 @@ button{
     border: 1px solid #F4CE14;
     box-shadow:  0.2vw 0.2vw 1vw #F5F7F8;
     font-size: x-large;
+}
+button:hover{
+    background-color: #F4CE14;
+    color: #45474B;
+    border: 1px solid #F4CE14;
 }
 button:disabled{
     background-color: #F4CE14;

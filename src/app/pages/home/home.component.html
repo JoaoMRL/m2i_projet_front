@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="intro">
             <h1>Give & Take</h1>
-            <p>Give & Take est un site web qui à pour but bla</p>
+            <p>Bienvenue sur Give&Take, la plateforme où le partage rencontre l'entraide. Découvrez un nouveau moyen de donner et recevoir, où chaque objet trouve une nouvelle vie et chaque geste compte.</p>
             <hr>
         </div>
         <div class="searchBar">
@@ -14,9 +14,10 @@
                 </button>
             </form>
         </div>
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-evenly flex-md-wrap flex-wrap" >
             
-            <app-card-view></app-card-view>
+            <app-card-view class="mt-2" *ngFor="let annonce of annonces"
+            [name]="annonce.name" [msg]="annonce.msg" [img]="annonce.theObjet.image" ></app-card-view>
 
         </div>
     </div>

@@ -1,8 +1,9 @@
 <div class="card" style="width: 16rem;">
-    <img src="assets/img/img.png" class="card-img-top" alt="...">
+    <img src="assets/img/img.png" class="card-img-top" alt="..." *ngIf="img">
+    <img src="assets/img/img.png" class="card-img-top" alt="..." *ngIf="!img">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title"> {{name}} </h5>
+      <p class="card-text"> {{msg}} </p>
+      <a href="#" class="btn btn-primary">Visiter</a>
     </div>
   </div>

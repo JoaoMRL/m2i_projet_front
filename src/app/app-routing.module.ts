@@ -9,8 +9,8 @@ import { ListAnnoncesComponent } from './pages/list-annonces/list-annonces.compo
 import { AddObjectComponent } from './pages/add-object/add-object.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent, canActivate: [authGuard]},
-  { path: 'register', component: RegisterComponent, canActivate: [authGuard] },
+  { path: '', component: HomeComponent, canActivate:[authGuard]},
+  { path: 'register', component: RegisterComponent },
   { path: 'objects', component: ListObjectsComponent, canActivate: [authGuard] },
   { path: 'annonces', component: ListAnnoncesComponent, canActivate: [authGuard] },
   { path: 'emprunts', component: ListEmpruntsComponent, canActivate: [authGuard] },
