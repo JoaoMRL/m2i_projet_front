@@ -7,6 +7,7 @@ import { ListObjectsComponent } from './pages/list-objects/list-objects.componen
 import { ListEmpruntsComponent } from './pages/list-emprunts/list-emprunts.component';
 import { ListAnnoncesComponent } from './pages/list-annonces/list-annonces.component';
 import { AddObjectComponent } from './pages/add-object/add-object.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate:[authGuard]},
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: 'annonces', component: ListAnnoncesComponent, canActivate: [authGuard] },
   { path: 'emprunts', component: ListEmpruntsComponent, canActivate: [authGuard] },
   { path: 'object', component: AddObjectComponent, canActivate: [authGuard] },
-  { path: '**', component: HomeComponent, canActivate: [authGuard]}
+  { path: '**', component: NotFoundComponent}
 ];
 
 

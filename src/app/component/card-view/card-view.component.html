@@ -3,7 +3,11 @@
     <img src="assets/img/img.png" class="card-img-top" alt="..." *ngIf="!img">
     <div class="card-body">
       <h5 class="card-title"> {{name}} </h5>
-      <p class="card-text"> {{msg}} </p>
-      <a href="#" class="btn btn-primary">Visiter</a>
+      <p class="card-text" style="height: calc(1.5em * 3); overflow: hidden; white-space: wrap; text-overflow: ellipsis;"> {{msg}} </p>
+      <div class="d-flex justify-content-between align-items-center">
+        <a href="/annonce/{{id}}" class="btn btn-primary">Voir plus</a>
+        <p *ngIf="status === 'Disponible'" style="color: green;" > {{status}} </p>
+        <p *ngIf="status !== 'Disponible'" style="color: red;"> {{status}} </p>
+      </div>
     </div>
   </div>

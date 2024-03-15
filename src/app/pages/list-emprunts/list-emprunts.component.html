@@ -11,7 +11,9 @@
         </div>
 
         <div class="card m-3 d-flex flex-column">
-            <app-one-of-list-object></app-one-of-list-object>
+            <app-one-of-list-object *ngFor="let emprunt of emprunts" 
+            [description]="emprunt.msgEmprunt" [status]="emprunt.status" [name]="title"
+            [id]="emprunt.id" [wtiam]="'my_emprunt'"></app-one-of-list-object>
         </div>
     </div>
     <app-footer></app-footer>

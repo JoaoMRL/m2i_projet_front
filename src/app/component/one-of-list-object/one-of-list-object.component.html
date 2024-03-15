@@ -1,5 +1,11 @@
 <div class="container-fluid">
-    <a href="" class="form-control m-2">
-        a
+    <a href="/{{wtiam}}/{{id}}" class="form-control m-2 d-flex flex-column">
+        <div class="d-flex align-item-center justify-content-between">
+            <h5> {{name}} </h5>
+            <p *ngIf="status === 'Disponible'" style="color: green;"> {{status}} </p>
+            <p *ngIf="status !== 'Disponible'" style="color: red;"> {{status}} </p>
+        </div>
+        <hr>
+        <p> {{description}} </p>
     </a>
 </div>

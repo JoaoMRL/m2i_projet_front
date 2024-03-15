@@ -11,7 +11,9 @@
         </div>
 
         <div class="card m-3 d-flex flex-column">
-            <app-one-of-list-object></app-one-of-list-object>
+            <app-one-of-list-object *ngFor="let annonce of annonces"
+            [name]="annonce.name" [description]="annonce.msg" [id]="annonce.id" [status]="annonce.status"
+            [wtiam]="'my_annonce'"   ></app-one-of-list-object>
         </div>
     </div>
     <app-footer></app-footer>

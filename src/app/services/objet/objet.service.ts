@@ -15,7 +15,7 @@ export class ObjetService {
   }
 
   fetchOneByUser(id:any){
-    return this.http.get<Objet>(environment.serverUrl+'/api/objets/user/'+id);
+    return this.http.get<Objet[]>(environment.serverUrl+'/api/objets/user/'+id);
   }
 
   add(objet:Objet){

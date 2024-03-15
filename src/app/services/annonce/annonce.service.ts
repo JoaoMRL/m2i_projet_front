@@ -18,6 +18,10 @@ export class AnnonceService {
     return this.http.get<Annonce>(environment.serverUrl+'/api/annonces/'+id);
   }
 
+  fetchOneByUser(id:any){
+    return this.http.get<Annonce[]>(environment.serverUrl+'/api/annonces/user/'+id);
+  }
+
   search(term:string){
     return this.http.get<Annonce[]>(environment.serverUrl+'/api/annonces/search/'+term);
   }

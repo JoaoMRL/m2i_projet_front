@@ -18,6 +18,10 @@ export class EmpruntService {
     return this.http.get<Emprunt>(environment.serverUrl+'/api/emprunts/'+id);
   }
 
+  fetchOneByUser(id:any){
+    return this.http.get<Emprunt[]>(environment.serverUrl+'/api/emprunts/user/'+id);
+  }
+
   add(emprunts:Emprunt){
     return this.http.post<Emprunt>(environment.serverUrl+'/api/emprunts', emprunts);
   }

@@ -20,6 +20,7 @@ import { AddAnnonceComponent } from './pages/annonces/add-annonce/add-annonce.co
 import { ViewAnnonceComponent } from './pages/annonces/view-annonce/view-annonce.component';
 import { AddEmpruntComponent } from './pages/emprunts/add-emprunt/add-emprunt.component';
 import { ViewEmpruntComponent } from './pages/emprunts/view-emprunt/view-emprunt.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ViewEmpruntComponent } from './pages/emprunts/view-emprunt/view-emprunt
     AddAnnonceComponent,
     ViewAnnonceComponent,
     AddEmpruntComponent,
-    ViewEmpruntComponent
+    ViewEmpruntComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
