@@ -22,7 +22,6 @@ export class RegisterComponent implements OnInit {
   feedback = '';
   isLogin = false;
 
-
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
@@ -33,13 +32,13 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     if (!this.isLogin) {
       this.authService.addUser(this.user).subscribe({
-        complete: () => { this.feedback = 'Registration complete.'; this.isLogin = true },
-        error: () => this.feedback = 'User already exists'
+        complete: () => { this.feedback = 'Inscription reussi.'; this.isLogin = true },
+        error: () => this.feedback = 'Utilisateur existe'
       });
     } else {
       this.authService.login(this.user).subscribe({
         complete: () => this.router.navigate(['/']),
-        error: () => this.feedback = 'Credentials error'
+        error: () => this.feedback = "Erreurs d'identifiants"
       });
     }
   }

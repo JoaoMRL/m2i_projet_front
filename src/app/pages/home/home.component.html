@@ -8,8 +8,8 @@
         </div>
         <div class="searchBar">
             <form class="d-flex" role="search">
-                <input type="search" name="search" placeholder="Search" class="form-control me-2" id="search">
-                <button type="submit">
+                <input type="search" name="search" [(ngModel)]="searchBar" placeholder="Search" class="form-control me-2" id="search">
+                <button (click)="search()">
                     <img src="assets/icon_loupe/loupe.png" alt="">
                 </button>
             </form>

@@ -76,6 +76,9 @@ button:disabled{
     border: 1px solid #F4CE14;
 }
 
+p{
+    color: #F4CE14;
+}
 
 
 @media screen and (max-width: 992px) {

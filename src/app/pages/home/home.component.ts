@@ -14,14 +14,19 @@ export class HomeComponent implements OnInit {
   constructor(public authService:AuthService, 
     private annonceService:AnnonceService){}
 
+  searchBar:string="";
+
   ngOnInit(): void {
     this.annonceService.fetchAll().subscribe(data => this.annonces = data);
-    // this.annonceService.listen('nouvelleAnnonce').subscribe((nouvelleAnnonce: any) => {
-    //   this.annonces.push(nouvelleAnnonce);
-    // });
-  }
-  checkIfLogged() {
-    this.authService.getUser().subscribe(data => console.log(data));
   }
 
+  search(){
+    if (this.searchBar.length >0) {
+      this.annonceService.search(this.searchBar).subscribe(data => this.annonces = data);
+    }else{
+      this.annonceService.fetchAll().subscribe(data => this.annonces=data);
+    }
+    
+    
+  }
 }
