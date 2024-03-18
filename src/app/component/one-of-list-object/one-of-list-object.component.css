@@ -14,3 +14,10 @@ p{
 hr{
     margin: 0;
 }
+
+
+@media screen and (max-width:1100px) {
+    .container-fluid{
+        padding-right: 24px;
+    }
+}

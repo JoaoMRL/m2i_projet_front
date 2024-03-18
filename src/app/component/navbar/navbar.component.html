@@ -14,8 +14,9 @@
                         Add
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="/object">Objet</a></li>
-                        <li><a class="dropdown-item" href="#">Annonce</a></li>
+                        <li><a class="dropdown-item" href="/objects/add">Objet</a></li>
+                        <li><a class="dropdown-item" href="/annonces/add">Annonce</a></li>
+                        <li><a class="dropdown-item" href="/emprunts/add">Emprunts</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown col-lg-5 col-xl-5 col-md-5">
@@ -34,7 +35,7 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Compte</a></li>
-                        <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+                        <li><a class="dropdown-item" (click)="deco()">Déconnexion</a></li>
                     </ul>
                 </li>
             </ul>

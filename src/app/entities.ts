@@ -20,7 +20,7 @@ export interface Objet{
 }
 
 export interface Annonce{
-    id?:number;
+    id:string;
     name:string;
     type:string;
     msg:string;

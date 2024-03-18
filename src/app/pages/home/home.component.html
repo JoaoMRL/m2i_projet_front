@@ -17,7 +17,8 @@
         <div class="d-flex justify-content-evenly flex-md-wrap flex-wrap " >
             
             <app-card-view class="mt-2" *ngFor="let annonce of annonces"
-            [name]="annonce.name" [msg]="annonce.msg" [img]="annonce.theObjet.image" [status]="annonce.status" 
+            [name]="annonce.name"
+            [msg]="annonce.msg" [img]="annonce.theObjet.image" [status]="annonce.status" 
             [id]="annonce.id"></app-card-view>
 
         </div>

@@ -10,6 +10,7 @@ export class CardViewComponent {
   @Input() msg:string="";
   @Input() img?:string;
   @Input() status?:string;
-  @Input() id?:Number;
+  @Input() id:string ="";
 
+  
 }

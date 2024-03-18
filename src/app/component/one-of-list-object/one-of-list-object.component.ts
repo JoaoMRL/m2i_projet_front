@@ -8,7 +8,7 @@ import { Component, Input } from '@angular/core';
 export class OneOfListObjectComponent {
   
   @Input() wtiam?:string;
-  @Input() id?:number;
+  @Input() id?:number | string;
   @Input() name?:string;
   @Input() description?:string;
   @Input() status?:string;
