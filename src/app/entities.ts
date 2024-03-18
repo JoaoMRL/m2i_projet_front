@@ -20,15 +20,15 @@ export interface Objet{
 }
 
 export interface Annonce{
-    id:string;
+    id?:string;
     name:string;
     type:string;
     msg:string;
     owner:number;
     idObjet:number;
     status:string;
-    theOwner:InfoUser;
-    theObjet:InfoObjet;
+    theOwner?:InfoUser;
+    theObjet?:InfoObjet;
 }
 
 export interface Emprunt{

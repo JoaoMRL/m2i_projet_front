@@ -33,17 +33,23 @@ textarea{
     background-color: #495E57;
     color: #F5F7F8;
     border: 1px solid #495E57;
-    border-radius: 3%;
+    border-radius: 5%;
     padding-bottom: 0.5%;
 
     font-size: x-large;
+}
+
+.btnValidez:disabled{
+    background-color: #F5F7F8;
+    color: #495E57;
+    border: 1px solid #F5F7F8;
 }
 
 .btnAnnuler{
     background-color: #CF455C;
     color: #F5F7F8;
     border: 1px solid #CF455C;
-    border-radius: 3%;
+    border-radius: 5%;
     padding-bottom: 0.5%;
 
     font-size: x-large;
@@ -56,13 +62,13 @@ textarea{
 
 @media screen and (max-width:576px) {
     .btnValidez{
-        font-size: small;
+        font-size: medium;
     }
     .btnAnnuler{
-        font-size: small;
+        font-size: medium;
 
     }
     .btnSearch {
-        font-size: small;
+        font-size: medium;
     }
 }

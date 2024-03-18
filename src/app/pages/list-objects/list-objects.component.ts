@@ -19,11 +19,11 @@ export class ListObjectsComponent implements OnInit {
     let tempUser = localStorage.getItem('logged')
     if (tempUser) {
       this.user = JSON.parse(tempUser);
-      console.log(this.user);
+      // console.log(this.user);
     }
 
     if (this.user) {
-      this.objectService.fetchOneByUser(this.user.id).subscribe(data=> {
+      this.objectService.fetchOneByUser(this.user['id']).subscribe(data=> {
         this.objects = data;
       });
     }

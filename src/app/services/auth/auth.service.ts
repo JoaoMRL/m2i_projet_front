@@ -26,10 +26,10 @@ export class AuthService {
       switchMap(() => this.getUser()),
       tap(data => {
         this.logged = data;
-        if (data.id) {
-          localStorage.setItem('idUser', JSON.stringify(encodeURI(data.id.toString())));
-        }
-        localStorage.setItem('logged', JSON.stringify(data));
+        localStorage.setItem('logged', JSON.stringify({'id':data.id, 
+        'firstName':data.firstName, 'email':data.email, 
+        'avatar':data.avatar, 'name':data.name, 
+        'phoneNumber':data.phoneNumber, 'address':data.address}));
       })
     );
   }
@@ -41,7 +41,6 @@ export class AuthService {
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('logged');
-    localStorage.removeItem('idUser');
     this.logged =null;
     this.router.navigate(['/register'])
   }

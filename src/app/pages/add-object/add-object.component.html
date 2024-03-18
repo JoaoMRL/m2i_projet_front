@@ -1,9 +1,9 @@
 <div class="divBody d-flex flex-column">
     <app-navbar></app-navbar>
     <div class="container-fluid">
-        <form action="">
-            <input type="text" class="form-control mt-3 " [(ngModel)]="object.name" placeholder="Nom de l'objet">
-            <textarea class="form-control mt-5" [(ngModel)]="object.description" placeholder="Descritpion" id="floatingTextarea"></textarea>
+        <form (ngSubmit)="formSubmit()" #objectForm="ngForm">
+            <input type="text" minlength="3" class="form-control mt-3 " [(ngModel)]="object.name" name="name" placeholder="Nom de l'objet" required>
+            <textarea class="form-control mt-5" minlength="3" [(ngModel)]="object.description" name="description" placeholder="Descritpion" id="floatingTextarea" required></textarea>
            <div class="d-flex mt-5 searchBar">
             <input type="search" name="search" placeholder="Search" class="form-control me-2" id="search">
             <button type="" class="btnSearch">
@@ -11,9 +11,10 @@
             </button>
            </div>
            <div class="d-flex justify-content-evenly mt-5">
-                <button type="submit" class="btnValidez">Ajouter</button>
+                <button type="submit" class="btnValidez"  [disabled]="objectForm.form.invalid">Ajouter</button>
                 <button type="reset" class="btnAnnuler"><a href="">Annuler</a></button>
            </div>
+           <div *ngIf="feedback"> {{feedback}} </div>
         </form>
     </div>
     <app-footer></app-footer>

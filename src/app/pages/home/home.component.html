@@ -15,11 +15,21 @@
             </form>
         </div>
         <div class="d-flex justify-content-evenly flex-md-wrap flex-wrap " >
+            <ng-container *ngFor="let annonce of annonces">
+                <ng-container *ngIf="annonce.theObjet">
+                    <app-card-view class="mt-2" 
+                    [name]="annonce.name"
+                    [msg]="annonce.msg" [img]="annonce.theObjet.image" [status]="annonce.status" 
+                    [id]="annonce.id"></app-card-view>
+                </ng-container>
+                <ng-container *ngIf="!annonce.theObjet">
+                    <app-card-view class="mt-2" 
+                    [name]="annonce.name"
+                    [msg]="annonce.msg" [status]="annonce.status" 
+                    [id]="annonce.id"></app-card-view>
+                </ng-container>
+            </ng-container>
             
-            <app-card-view class="mt-2" *ngFor="let annonce of annonces"
-            [name]="annonce.name"
-            [msg]="annonce.msg" [img]="annonce.theObjet.image" [status]="annonce.status" 
-            [id]="annonce.id"></app-card-view>
 
         </div>
     </div>

@@ -22,7 +22,7 @@ export class ListEmpruntsComponent implements OnInit{
     }
 
     if (this.user) {
-      this.empruntService.fetchOneByUser(this.user.id).subscribe(data=> {
+      this.empruntService.fetchOneByUser(this.user['id']).subscribe(data=> {
         this.emprunts = data;
         this.emprunts.forEach(element => {
           element.theAnnonce.forEach(nameAnnonce => {

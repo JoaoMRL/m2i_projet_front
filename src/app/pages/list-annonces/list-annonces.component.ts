@@ -21,7 +21,7 @@ export class ListAnnoncesComponent implements OnInit {
     }
 
     if (this.user) {
-      this.annonceService.fetchOneByUser(this.user.id).subscribe(data=> {
+      this.annonceService.fetchOneByUser(this.user['id']).subscribe(data=> {
         this.annonces = data;
       });
     }
